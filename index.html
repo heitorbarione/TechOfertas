@@ -1,29 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/and/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tech Oferta — A tecnologia que você quer, pelo preço que você procura</title>
-    <meta
-      name="description"
-      content="Portal especializado em ofertas, promoções e produtos de tecnologia no Mercado Livre. Compare especificações, descubra oportunidades e compre com segurança."
-    />
-    <meta property="og:title" content="Tech Oferta — Ofertas e Promoções de Tecnologia" />
-    <meta
-      property="og:description"
-      content="A tecnologia que você quer, pelo preço que você procura. Confira ofertas verificadas de celulares, notebooks, áudio, gamer e eletrônicos."
-    />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#09090B" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Tech Ofertas</title>
   </head>
-  <body class="bg-zinc-950 text-zinc-50 antialiased selection:bg-yellow-400 selection:text-zinc-950">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
